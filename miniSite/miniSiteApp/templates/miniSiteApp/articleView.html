@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="card">
+    <div class="card-body">
+    <img src="{{ article.rasm.url }}" class="card-img-bottom" alt="...">
+        <h1 class="card-title">{{article.nomi}}</h1>
+        <p class="card-text">{{article.tarif}}</p>
+        <p class="card-text">
+            <big>{{article.muallif}}</big>
+            <br>
+            <small class="text-muted">{{article.vaqt|date:"H:i \/ d.m.Y"}}</small></p>
+        </div>
+</div>
+</body>
+</html>

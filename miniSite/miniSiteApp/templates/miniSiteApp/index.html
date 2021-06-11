@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for m in maqolalar %}
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title">{{m.nomi}}</h1>
+        <p class="card-text">{{m.tarif|truncatechars:100}}</p>
+        <p class="card-text">
+            <big>{{m.muallif}}</big>
+            <br>
+            <small class="text-muted">{{m.vaqt|date:"H:i \/ d.m.Y"}}</small></p>
+        <a href="{% url 'batafsil' m.id %}"><button type="button" class="btn btn-sm btn-success">Batafsil</button></a>
+    </div>
+</div>
+        <hr>
+{%endfor%}
+</body>
+</html>
